@@ -10,7 +10,7 @@
                             <div class="media">
                                 <img src="{{ object.author.profile.image.url }}" class="rounded-circle mr-3">
                                 <div class="media-body">
-                                    <a href="{% url 'profile' %}" class="mt-0">{{ object.author }}</a>
+                                    <a href="{% url 'user-posts' object.author.username %}" class="mt-0">{{ object.author }}</a>
                                     <small class="text-muted">{{ object.date_posted|date:"d F Y" }}</small>
                                     {% if object.author == user %}
                                         <a href="{% url 'post-update' object.id %}" class="btn btn-secondary btn-sm mb-1 mt-1">Modifier</a>
